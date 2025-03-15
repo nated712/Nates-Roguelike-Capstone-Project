@@ -19,7 +19,7 @@ public class RotateBasicSpell : MonoBehaviour
 
     void Update() {
         Rotation();
-        Shooting();
+        Shoot();
     }
    
     void Rotation(){
@@ -28,7 +28,7 @@ public class RotateBasicSpell : MonoBehaviour
         staff.transform.right = direction;
     }
 
-    void Shooting(){
+    void Shoot(){
 
         if(Input.GetMouseButton(0) && Time.time >= lastShotTime + shootDelay){
             //spawn bullet
@@ -36,6 +36,15 @@ public class RotateBasicSpell : MonoBehaviour
 
             lastShotTime = Time.time;
         }
+
+        if(Input.GetMouseButton(1) && Time.time >= lastShotTime + shootDelay){
+            projInst = Instantiate(projectile, spawnPoint.position, staff.transform.rotation);
+
+            lastShotTime = Time.time;
+        }
+
+
+
     }
 
 
