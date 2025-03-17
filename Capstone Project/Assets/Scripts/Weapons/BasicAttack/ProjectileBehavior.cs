@@ -33,7 +33,7 @@ public class ProjectileBehavior : MonoBehaviour
 
     void SetVelocity(){
 
-        rb.velocity = transform.right * projSpeed;
+        rb.linearVelocity = transform.right * projSpeed;
     }
 
     void SetDestroyTime(){
