@@ -52,6 +52,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -76,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 1650906053
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 523727795, guid: 9fedc69aa99ce6247b1ef1f1464462a7, type: 3}
+  m_Sprite: {fileID: 1148797201, guid: 9fedc69aa99ce6247b1ef1f1464462a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,6 +112,7 @@ PolygonCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5815294851464038333}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -132,12 +136,13 @@ PolygonCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.26, y: 0.27}
+    oldSize: {x: 0.15, y: 0.16}
     newSize: {x: 0.26, y: 0.27}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -145,18 +150,17 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.047660157, y: 0.11733983}
-      - {x: -0.01862489, y: 0.01683589}
-      - {x: -0.14284375, y: -0.11353123}
-      - {x: -0.13160549, y: -0.14944924}
-      - {x: -0.07532036, y: -0.11573445}
-      - {x: 0.056568038, y: 0.023260485}
-      - {x: 0.09628513, y: 0.030550797}
-      - {x: 0.13963282, y: 0.14463282}
+    - - {x: -0.013968666, y: 0.028960047}
+      - {x: -0.06810271, y: 0.0017189719}
+      - {x: -0.074999996, y: -0.09379458}
+      - {x: -0.010861601, y: -0.053790223}
+      - {x: 0.016723284, y: -0.051723287}
+      - {x: 0.074999996, y: -0.01}
+      - {x: 0.07362062, y: 0.103450924}
   m_UseDelaunayMesh: 0
 --- !u!50 &5116422946452429003
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -167,8 +171,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
