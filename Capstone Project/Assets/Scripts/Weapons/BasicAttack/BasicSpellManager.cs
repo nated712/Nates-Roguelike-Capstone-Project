@@ -38,17 +38,19 @@ public class BasicSpellManager : MonoBehaviour
     void Shoot(){
 
         if((Input.GetMouseButton(1) && Time.time >= lastShotTime + shootDelay) || (Input.GetMouseButton(0) && Time.time >= lastShotTime + shootDelay) ){
+            Vector3 spawnPos = spawnPoint.position;
+            spawnPos.z = -1;
             if(shotCount < shotsToSpecial){
                 //regular shot
                 //spawn bullet
-                projInst = Instantiate(projectile, spawnPoint.position, staff.transform.rotation);
+                projInst = Instantiate(projectile, spawnPos, staff.transform.rotation);
                 lastShotTime = Time.time;
                 shotCount++;
             } 
             //if special shot
             else if(shotCount == shotsToSpecial){
                 shotCount = 1;
-                projInst = Instantiate(specialProj, spawnPoint.position, staff.transform.rotation);
+                projInst = Instantiate(specialProj, spawnPos, staff.transform.rotation);
                 lastShotTime = Time.time;
             }
         }
