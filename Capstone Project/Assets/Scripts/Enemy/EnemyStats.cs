@@ -25,7 +25,7 @@ public class EnemyStats : MonoBehaviour
     }
 
     void Kill(){
-
+        //add an on kill event
         Destroy(gameObject);
     }
 
