@@ -9,7 +9,7 @@ public class ChunkTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mc = FindObjectOfType<MapController>();
+        mc = FindFirstObjectByType<MapController>();
     }
 
     private void OnTriggerStay2D(Collider2D col){
