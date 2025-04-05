@@ -1,21 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
     public EnemyScriptableObject enemyData;
-    Transform player;
-    bool pause = false;
+    private Transform player;
+    private bool pause;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = FindFirstObjectByType<PManager>().transform;
+        pause = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
@@ -24,40 +21,39 @@ public class EnemyMovement : MonoBehaviour
 
     void Move()
     {
-        if(pause == false){
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemyData.MoveSpeed * Time.deltaTime); //Constant movement towards player
-        }
-    }
-    void FacePlayer(){
-        if (player != null){
-            Vector2 direction = player.position - transform.position;
-                        // Flip based on the horizontal direction
-            if (direction.x >= 0)
-            {
-                transform.localScale = new Vector3(-1, 1, 1); // Facing left
-            }
-            else
-            {
-                transform.localScale = new Vector3(1, 1, 1); // Facing right
-            }
+        if (!pause && player != null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, enemyData.MoveSpeed * Time.deltaTime);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    void FacePlayer()
     {
-        if(other.gameObject.CompareTag("Player")){
-            other.GetComponent<HealthManaManager>().takeDamage(20);
+        if (player != null)
+        {
+            Vector2 direction = player.position - transform.position;
+            transform.localScale = new Vector3(direction.x >= 0 ? -1 : 1, 1, 1);
         }
-        stopMoving();
-
     }
 
-    IEnumerator stopMoving(){
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            HealthManaManager hm = other.GetComponent<HealthManaManager>();
+            if (hm != null)
+            {
+                hm.takeDamage(20);
+            }
+
+            StartCoroutine(stopMoving());
+        }
+    }
+
+    IEnumerator stopMoving()
+    {
         pause = true;
         yield return new WaitForSeconds(2);
         pause = false;
-
     }
-
-
 }

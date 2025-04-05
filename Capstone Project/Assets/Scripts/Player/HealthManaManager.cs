@@ -1,7 +1,7 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.TextCore.LowLevel;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class HealthManaManager : MonoBehaviour
 {
     public float maxMana = 100f;
@@ -9,6 +9,8 @@ public class HealthManaManager : MonoBehaviour
     public float manaRegenRate = 20f;
     public float maxHealth = 100f;
     public float currentHP;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +20,7 @@ public class HealthManaManager : MonoBehaviour
 
     void Update()
     {
+        RegenMana();
         // Check for "R" key press to reset the stage
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -29,7 +32,7 @@ public class HealthManaManager : MonoBehaviour
         currentHP -= damageAmount;
         currentHP = Mathf.Clamp(currentHP, 0, maxHealth);
         
-        if(currentHP < 0){    
+        if(currentHP <= 0){    
             Die();      
         }
     }
@@ -42,7 +45,7 @@ public class HealthManaManager : MonoBehaviour
     }
 
     public void spendMana(float amount){
-        if (currentMana > amount){
+        if (currentMana >= amount){
             currentMana -= amount;
             if (currentMana < 0)
             {
