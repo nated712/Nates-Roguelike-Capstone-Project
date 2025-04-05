@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
     public EnemyScriptableObject enemyData;
     Transform player;
+    bool pause = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +18,16 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemyData.MoveSpeed * Time.deltaTime); //Constant movement towards player
-
+        Move();
         FacePlayer();
     }
 
+    void Move()
+    {
+        if(pause == false){
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemyData.MoveSpeed * Time.deltaTime); //Constant movement towards player
+        }
+    }
     void FacePlayer(){
         if (player != null){
             Vector2 direction = player.position - transform.position;
@@ -35,4 +42,22 @@ public class EnemyMovement : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player")){
+            other.GetComponent<HealthManaManager>().takeDamage(20);
+        }
+        stopMoving();
+
+    }
+
+    IEnumerator stopMoving(){
+        pause = true;
+        yield return new WaitForSeconds(2);
+        pause = false;
+
+    }
+
+
 }
