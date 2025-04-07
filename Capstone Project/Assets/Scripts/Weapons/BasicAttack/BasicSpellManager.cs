@@ -13,6 +13,7 @@ public class BasicSpellManager : MonoBehaviour
     Vector2 direction;
     private int shotCount;
     [SerializeField] int shotsToSpecial;
+    public HealthManaManager hmm;
 
     private GameObject projInst;
 
@@ -46,13 +47,16 @@ public class BasicSpellManager : MonoBehaviour
                 projInst = Instantiate(projectile, spawnPos, staff.transform.rotation);
                 lastShotTime = Time.time;
                 shotCount++;
+                hmm.spendMana(10f);
             } 
             //if special shot
             else if(shotCount == shotsToSpecial){
                 shotCount = 1;
                 projInst = Instantiate(specialProj, spawnPos, staff.transform.rotation);
                 lastShotTime = Time.time;
+                hmm.spendMana(15f);
             }
+            
         }
 
 
