@@ -11,24 +11,23 @@ public class ProjectileBehavior : MonoBehaviour
     
 
 
-    [SerializeField] private LayerMask whatDestroysBullet;
+    [SerializeField] private int pierce;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         SetDestroyTime();
-        SetVelocity();
-        
+        SetVelocity();   
     }
-
     protected virtual void OnTriggerEnter2D(Collider2D col){
         //reference enemy script and make them take damage
         if (col.CompareTag("Enemy")){
             EnemyStats enemy = col.GetComponent<EnemyStats>();
             enemy.takeDamage(damage);
-            Destroy(gameObject);
+            pierce -= 1;
+            if(pierce <= 0){
+                Destroy(gameObject);
+            }
         }
-
-
     }
 
     void SetVelocity(){

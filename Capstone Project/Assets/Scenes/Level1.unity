@@ -1421,9 +1421,12 @@ MonoBehaviour:
   staff: {fileID: 7109176967758369122}
   projectile: {fileID: 4581905313149315967, guid: f9b33d54628bbe94cb637500433daab2, type: 3}
   specialProj: {fileID: 2688744571237527861, guid: bc9078056fe2dfe48baa9968241a85b9, type: 3}
+  tier3Proj: {fileID: 5270478755463840894, guid: e3d41a1c5c22e6d41935149d03295ed5, type: 3}
   spawnPoint: {fileID: 1672413776016367686}
   shotsToSpecial: 5
+  shotsToSpecial2: 5
   hmm: {fileID: 8413221853720075645}
+  spellManaCost: 7
   shootDelay: 0.4
 --- !u!1 &3571623844828537474
 GameObject:
@@ -1879,7 +1882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMana: 100
   currentMana: 100
-  manaRegenRate: 7
+  manaRegenRate: 15
   maxHealth: 100
   currentHP: 100
   HPslider: {fileID: 13815749}

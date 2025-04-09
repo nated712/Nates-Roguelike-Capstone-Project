@@ -106,9 +106,7 @@ MonoBehaviour:
   projSpeed: 15
   destroyTime: 5
   damage: 2
-  whatDestroysBullet:
-    serializedVersion: 2
-    m_Bits: 256
+  pierce: 1
 --- !u!50 &3456169930369961728
 Rigidbody2D:
   serializedVersion: 5

@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 public class BasicSpellManager : MonoBehaviour
 { 
-  
-
     [SerializeField] private GameObject staff;
     [SerializeField] private GameObject projectile;
     [SerializeField] private GameObject specialProj;
+    [SerializeField] private GameObject tier3Proj;
     [SerializeField] private Transform spawnPoint;
     Vector2 worldPosition;
     Vector2 direction;
     private int shotCount;
+    private int shotCount2;
     [SerializeField] int shotsToSpecial;
+    [SerializeField] int shotsToSpecial2;
     public HealthManaManager hmm;
-    public float spellManaCost = 15f;
+    public float spellManaCost = 7f;
 
     private GameObject projInst;
 
@@ -25,6 +26,7 @@ public class BasicSpellManager : MonoBehaviour
 
     void Start() {
         shotCount = 1;
+        shotCount2 = 1;
     }
     void Update() {
         Rotation();
@@ -38,10 +40,9 @@ public class BasicSpellManager : MonoBehaviour
     }
 
     void Shoot(){
-
-        if((Input.GetMouseButton(1) && Time.time >= lastShotTime + shootDelay) || (Input.GetMouseButton(0) && Time.time >= lastShotTime + shootDelay) ){
-            Vector3 spawnPos = spawnPoint.position;
-            spawnPos.z = -1;
+        Vector3 spawnPos = spawnPoint.position;
+        spawnPos.z = -1;
+        if(Input.GetMouseButton(0) && Time.time >= lastShotTime + shootDelay){
             if(shotCount < shotsToSpecial && hmm.currentMana > spellManaCost){
                 //regular shot
                 //spawn bullet
@@ -51,18 +52,26 @@ public class BasicSpellManager : MonoBehaviour
                 hmm.spendMana(spellManaCost);
             } 
             //if special shot
-            else if(shotCount == shotsToSpecial && hmm.currentMana > (spellManaCost * 1.5f)){
+            else if(shotCount == shotsToSpecial && hmm.currentMana > spellManaCost){
                 shotCount = 1;
                 projInst = Instantiate(specialProj, spawnPos, staff.transform.rotation);
                 lastShotTime = Time.time;
-                hmm.spendMana(spellManaCost*1.5f);
-            }
-            
+                hmm.spendMana(spellManaCost);
+            }       
+        } else if (Input.GetMouseButton(1) && Time.time >= lastShotTime + shootDelay){
+                if(shotCount2 < shotsToSpecial2 && hmm.currentMana > (spellManaCost * 1.5f)){
+                    //special shot command
+                    //spawn bullet
+                    projInst = Instantiate(specialProj, spawnPos, staff.transform.rotation);
+                    lastShotTime = Time.time;
+                    shotCount2++;
+                    hmm.spendMana(spellManaCost * 1.5f);
+            }   else if(shotCount2 == shotsToSpecial2 && hmm.currentMana > (spellManaCost * 1.5f)){
+                    shotCount2 = 1;
+                    projInst = Instantiate(tier3Proj, spawnPos, staff.transform.rotation);
+                    lastShotTime = Time.time;
+                    hmm.spendMana(spellManaCost * 1.5f);
+            }     
         }
-
-
-
     }
-
-
 }
