@@ -53,7 +53,7 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator stopMoving()
     {
         pause = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1f);
         pause = false;
     }
 }
