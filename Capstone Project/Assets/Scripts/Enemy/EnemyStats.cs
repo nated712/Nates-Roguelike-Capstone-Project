@@ -8,6 +8,7 @@ public class EnemyStats : MonoBehaviour
     private float currentMoveSpeed;
     private float currentHealth;
     private float currentDamage;
+    [SerializeField] public GameObject HPDrop;
 
     void Awake()
     {
@@ -26,6 +27,10 @@ public class EnemyStats : MonoBehaviour
 
     void Kill(){
         //add an on kill event
+        int roll = Random.Range(0, 21);
+        if (roll == 20){
+            Instantiate(HPDrop, transform.position, Random.rotation);
+        }
         Destroy(gameObject);
     }
 
