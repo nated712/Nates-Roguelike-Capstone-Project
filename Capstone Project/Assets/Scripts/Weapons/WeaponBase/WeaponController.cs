@@ -25,7 +25,7 @@ public class WeaponController : MonoBehaviour
         currentCooldown -= Time.deltaTime;
         if (currentCooldown <= 0f)
         {
-            Attack();
+            Attack();  
         }
     }
 

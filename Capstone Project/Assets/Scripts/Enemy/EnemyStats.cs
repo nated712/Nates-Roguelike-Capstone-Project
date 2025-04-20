@@ -8,6 +8,8 @@ public class EnemyStats : MonoBehaviour
     private float currentMoveSpeed;
     private float currentHealth;
     private float currentDamage;
+    [SerializeField] public GameObject hurtEffect;
+    [SerializeField] public GameObject killEffect;
     [SerializeField] public GameObject HPDrop;
 
     void Awake()
@@ -19,7 +21,7 @@ public class EnemyStats : MonoBehaviour
 
     public void takeDamage(float dmg){
         currentHealth -= dmg;
-
+        Instantiate(hurtEffect, transform.position, Quaternion.identity);
         if(currentHealth <= 0){
             Kill();
         }
@@ -27,11 +29,11 @@ public class EnemyStats : MonoBehaviour
 
     void Kill(){
         //add an on kill event
+        Instantiate(killEffect, transform.position, Quaternion.identity);
         int roll = Random.Range(0, 21);
         if (roll == 20){
-            Instantiate(HPDrop, transform.position, Random.rotation);
+            Instantiate(HPDrop, transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
     }
-
 }

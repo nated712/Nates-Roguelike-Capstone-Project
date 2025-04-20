@@ -106,7 +106,7 @@ MonoBehaviour:
   projSpeed: 25
   destroyTime: 7
   damage: 10
-  pierce: 10
+  pierce: 1
 --- !u!50 &7400841512315931859
 Rigidbody2D:
   serializedVersion: 5

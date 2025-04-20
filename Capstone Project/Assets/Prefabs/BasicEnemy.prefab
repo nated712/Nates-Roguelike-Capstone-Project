@@ -172,6 +172,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: ede0178f0d6756b4ebf79204c7105892, type: 2}
+  hurtEffect: {fileID: 5100057737189128335, guid: 724bdbd4d0deb924fa898a8d4eaff3e1, type: 3}
+  killEffect: {fileID: 1315667110004280502, guid: ba3d389520beb10428d8622e91dc1518, type: 3}
+  HPDrop: {fileID: 4459389006661986236, guid: fb096747f03ac6048aaf4ceb6b4be1f6, type: 3}
 --- !u!114 &4175469171291345914
 MonoBehaviour:
   m_ObjectHideFlags: 0
