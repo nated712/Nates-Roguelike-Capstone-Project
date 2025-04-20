@@ -8,7 +8,8 @@ public class WeaponController : MonoBehaviour
     //Base for all weapons
     [Header("Weapon Stats")]
     public WeaponScriptableObject weaponData;
-    float currentCooldown;
+    public float currentCooldown;
+    public float MaxCooldown;
     protected PManager pm;
 
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class WeaponController : MonoBehaviour
         pm =FindFirstObjectByType<PManager>();
         //Weapon waits before firing
         currentCooldown = weaponData.CooldownDuration;
+        MaxCooldown = weaponData.CooldownDuration;
     }
 
     // Update is called once per frame
