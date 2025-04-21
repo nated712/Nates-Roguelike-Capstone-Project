@@ -90,7 +90,25 @@ public class ProjectileWeaponBehavior : MonoBehaviour
         if (currentPierce < 0){
             Destroy(gameObject);
         }
+    }
 
+    public void UpgradeDamage(float amount)
+    {
+        currentDamage += amount;
+    }
 
+    public void UpgradeSpeed(float amount)
+    {
+        currentSpeed += amount;
+    }
+
+    public void UpgradeCooldown(float amount)
+    {
+        currentCooldownDuration = Mathf.Max(0.05f, currentCooldownDuration - amount); // prevents negative cooldown
+    }
+
+    public void UpgradePierce(int amount)
+    {
+        currentPierce += amount;
     }
 }

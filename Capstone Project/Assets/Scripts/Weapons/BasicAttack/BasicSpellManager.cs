@@ -12,8 +12,8 @@ public class BasicSpellManager : MonoBehaviour
     Vector2 direction;
     private int shotCount;
     private int shotCount2;
-    [SerializeField] int shotsToSpecial;
-    [SerializeField] int shotsToSpecial2;
+    [SerializeField] public int shotsToSpecial;
+    [SerializeField] public int shotsToSpecial2;
     public HealthManaManager hmm;
     public float spellManaCost = 7f;
 
@@ -37,6 +37,20 @@ public class BasicSpellManager : MonoBehaviour
         worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = (worldPosition - (Vector2)staff.transform.position).normalized;
         staff.transform.right = direction;
+    }
+    public void ReduceShootDelay(float amount)
+    {
+        shootDelay = Mathf.Max(0.05f, shootDelay - amount); // Clamp to avoid too fast
+    }
+
+    public void ReduceManaCost(float amount)
+    {
+        spellManaCost = Mathf.Max(1f, spellManaCost - amount); // Clamp to avoid zero cost
+    }
+    public void ResetShotCountIfTooHigh()
+    {
+        shotCount = Mathf.Min(shotCount, shotsToSpecial);
+        shotCount2 = Mathf.Min(shotCount2, shotsToSpecial2);
     }
 
     void Shoot(){

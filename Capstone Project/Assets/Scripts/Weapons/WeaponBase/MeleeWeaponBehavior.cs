@@ -33,4 +33,26 @@ public class MeleeWeaponBehavior : MonoBehaviour
             enemy.takeDamage(currentDamage);
         }
     }
+
+    
+    public void UpgradeDamage(float amount)
+    {
+        currentDamage += amount;
+    }
+
+    public void UpgradeSpeed(float amount)
+    {
+        currentSpeed += amount;
+    }
+
+    public void UpgradeCooldown(float amount)
+    {
+        currentCooldownDuration = Mathf.Max(0.1f, currentCooldownDuration - amount); // prevents negative cooldown
+    }
+
+    public void UpgradePierce(int amount)
+    {
+        currentPierce += amount;
+    }
+    
 }
