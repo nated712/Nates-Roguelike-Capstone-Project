@@ -103,10 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be92d1f0886a42345b73a0c08116beef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projSpeed: 25
-  destroyTime: 7
+  projSpeed: 35
+  destroyTime: 5
   damage: 10
-  pierce: 1
+  pierce: 4
 --- !u!50 &7400841512315931859
 Rigidbody2D:
   serializedVersion: 5

@@ -1,7 +1,9 @@
 using UnityEngine;
 
 public class MenuEnemyFolow : MonoBehaviour
-{
+{   
+    Vector3 mousePosition;
+    Vector2 targetPosition;
     public float speed = 5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -9,19 +11,22 @@ public class MenuEnemyFolow : MonoBehaviour
         
     }
 
+
     // Update is called once per frame
     void Update()
+    {   
+        mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = Vector2.MoveTowards(transform.position, mousePosition, speed * Time.deltaTime);
+        FacePlayer();
+        
+    }
+
+    void FacePlayer()
     {
-        Vector3 mousePosition = Input.mousePosition;
-        Ray ray = Camera.main.ScreenPointToRay(mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
-        {
-            Vector3 targetPosition = hit.point; // Or hit.point + hit.normal for a surface
-        } else{
-            targetPosition = Vector3.zero;
-        }
-        Vector3 newPosition = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-        transform.position = newPosition;
+
+        Vector2 direction = mousePosition - transform.position;
+        transform.localScale = new Vector3(direction.x >= 0 ? -1 : 1, 1, 1);
+    
     }
 }
