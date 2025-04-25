@@ -1,12 +1,19 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class RangedEnemyMovement : MonoBehaviour
 {
     public EnemyScriptableObject enemyData;
     private Transform player;
     private bool pause;
     private Animator animator;
+
+    public GameObject projectilePrefab;
+    public Transform firePoint;  // where the projectile spawns from
+    public float attackRange = 5f;
+    public float attackCooldown = 2f;
+    private bool isAttacking = false;
+    private float lastAttackTime;
 
     void Start()
     {
@@ -17,8 +24,22 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        Move();
-        FacePlayer();
+        if (!pause)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+            if (distanceToPlayer < attackRange && Time.time - lastAttackTime >= attackCooldown && !isAttacking)
+            {
+                Debug.Log("Enemy is attacking!");
+                animator.SetTrigger("Attack");
+                isAttacking = true;
+            } else if(!isAttacking)
+            {
+                Move();
+            }
+    }
+
+    FacePlayer();
     }
 
     void Move()
@@ -46,6 +67,17 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    public void ShootProjectile()
+    {
+        if (firePoint != null && projectilePrefab != null)
+        {
+            GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+            Vector2 direction = (player.position - firePoint.position).normalized;
+            proj.GetComponent<Rigidbody2D>().linearVelocity = direction * 20f; // or whatever speed
+            lastAttackTime = Time.time;
+            isAttacking = false;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -68,3 +100,4 @@ public class EnemyMovement : MonoBehaviour
         pause = false;
     }
 }
+

@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: f4b54023d6b06df4c97fd72f43e8e20c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1342869322564901177
+    second: boss_debuff_0
+  - first:
+      213: -519519652704095134
+    second: boss_debuff_1
+  - first:
+      213: -5685260930841004088
+    second: boss_debuff_2
+  - first:
+      213: -2481872055492756174
+    second: boss_debuff_3
+  - first:
+      213: -118710415080907585
+    second: boss_debuff_4
+  - first:
+      213: -3728167878598152366
+    second: boss_debuff_5
+  - first:
+      213: -3861366829485626776
+    second: boss_debuff_6
+  - first:
+      213: 4886965708975104448
+    second: boss_debuff_7
+  - first:
+      213: 4219592624269993723
+    second: boss_debuff_8
+  - first:
+      213: -6681883991293110680
+    second: boss_debuff_9
+  - first:
+      213: 2830411625203628707
+    second: boss_debuff_10
+  - first:
+      213: 6568091916865389675
+    second: boss_debuff_11
+  - first:
+      213: -3817090787578610442
+    second: boss_debuff_12
+  - first:
+      213: 5350811707183391099
+    second: boss_debuff_13
+  - first:
+      213: 1602879300300264295
+    second: boss_debuff_14
+  - first:
+      213: 3193130027327584404
+    second: boss_debuff_15
+  - first:
+      213: -7192554759657447546
+    second: boss_debuff_16
+  - first:
+      213: 5088354428497834214
+    second: boss_debuff_17
+  - first:
+      213: 4053263612290475795
+    second: boss_debuff_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_debuff_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1814
+        width: 237
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9391047b884d2a210800000000000000
+      internalID: 1342869322564901177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_1
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1814
+        width: 237
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 264fcbed0ab4ac8f0800000000000000
+      internalID: -519519652704095134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_2
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1814
+        width: 237
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c7b0d12e45e911b0800000000000000
+      internalID: -5685260930841004088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_3
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1814
+        width: 238
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23db26ad38e9e8dd0800000000000000
+      internalID: -2481872055492756174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_4
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1814
+        width: 241
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc96f5a1814a5ef0800000000000000
+      internalID: -118710415080907585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_5
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1814
+        width: 243
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fa22d2113e24cc0800000000000000
+      internalID: -3728167878598152366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_6
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 1814
+        width: 245
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a6805b35ba96ac0800000000000000
+      internalID: -3861366829485626776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_7
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 1814
+        width: 247
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1e9f88b6df1d340800000000000000
+      internalID: 4886965708975104448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1558
+        width: 249
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6a87aa2210f8a30800000000000000
+      internalID: 4219592624269993723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1558
+        width: 250
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 866da9c79ed2543a0800000000000000
+      internalID: -6681883991293110680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_10
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1558
+        width: 250
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aaf5608064a74720800000000000000
+      internalID: 2830411625203628707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_11
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1558
+        width: 250
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6440e49ccc862b50800000000000000
+      internalID: 6568091916865389675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_12
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 1558
+        width: 249
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fcf5fa0728f60bc0800000000000000
+      internalID: -3817090787578610442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_13
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1558
+        width: 247
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71eaaad5e6e14a40800000000000000
+      internalID: 5350811707183391099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_14
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 1558
+        width: 245
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76359303b329e3610800000000000000
+      internalID: 1602879300300264295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_15
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 1558
+        width: 243
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4987e7887d6405c20800000000000000
+      internalID: 3193130027327584404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1302
+        width: 241
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f921bcd89ee2c90800000000000000
+      internalID: -7192554759657447546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_17
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1302
+        width: 238
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e036e9b4677d9640800000000000000
+      internalID: 5088354428497834214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_debuff_18
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1302
+        width: 237
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317279fb7c5104830800000000000000
+      internalID: 4053263612290475795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boss_debuff_0: 1342869322564901177
+      boss_debuff_1: -519519652704095134
+      boss_debuff_10: 2830411625203628707
+      boss_debuff_11: 6568091916865389675
+      boss_debuff_12: -3817090787578610442
+      boss_debuff_13: 5350811707183391099
+      boss_debuff_14: 1602879300300264295
+      boss_debuff_15: 3193130027327584404
+      boss_debuff_16: -7192554759657447546
+      boss_debuff_17: 5088354428497834214
+      boss_debuff_18: 4053263612290475795
+      boss_debuff_2: -5685260930841004088
+      boss_debuff_3: -2481872055492756174
+      boss_debuff_4: -118710415080907585
+      boss_debuff_5: -3728167878598152366
+      boss_debuff_6: -3861366829485626776
+      boss_debuff_7: 4886965708975104448
+      boss_debuff_8: 4219592624269993723
+      boss_debuff_9: -6681883991293110680
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

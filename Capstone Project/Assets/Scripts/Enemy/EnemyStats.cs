@@ -41,13 +41,13 @@ public class EnemyStats : MonoBehaviour
         Instantiate(killEffect, transform.position, Quaternion.identity);
         scoreManager.AddScore(100f);
 
-        int roll = Random.Range(0, 21); // 0 to 20
+        int roll = Random.Range(0, 31); // 0 to 20
 
-        if (roll == 20)
+        if (roll == 30)
         {
             Instantiate(HPDrop, transform.position, Quaternion.identity);
         }
-        else //if (roll == 19)
+        else if (roll == 0 || roll == 1)
         {
             Instantiate(weaponUpgradeDrop, transform.position, Quaternion.identity);
         }
