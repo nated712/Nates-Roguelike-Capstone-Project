@@ -73,7 +73,7 @@ public class RangedEnemyMovement : MonoBehaviour
         {
             GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
             Vector2 direction = (player.position - firePoint.position).normalized;
-            proj.GetComponent<Rigidbody2D>().linearVelocity = direction * 20f; // or whatever speed
+            proj.GetComponent<Rigidbody2D>().linearVelocity = direction * 10f; // or whatever speed
             lastAttackTime = Time.time;
             isAttacking = false;
         }

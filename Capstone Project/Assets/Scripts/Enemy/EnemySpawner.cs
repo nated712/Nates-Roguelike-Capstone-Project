@@ -3,8 +3,9 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    public GameObject enemyPrefab2;
     public float baseSpawnInterval = 2f;  // Starting interval
-    public float minSpawnInterval = 0.01f; // Minimum cap for spawn speed
+    public float minSpawnInterval = 0.05f; // Minimum cap for spawn speed
     public float spawnDistance = 15f;
     public Vector2 spawnRange = new Vector2(20f, 10f);
     public bool debugSpawnArea = true;
@@ -35,7 +36,14 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         Vector3 spawnPosition = GetRandomSpawnPosition();
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        int roll = Random.Range(0,11);
+        if (roll == 10)
+        {
+            Instantiate(enemyPrefab2, spawnPosition, Quaternion.identity);
+        } else
+        {
+            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        }
     }
 
     private Vector3 GetRandomSpawnPosition()

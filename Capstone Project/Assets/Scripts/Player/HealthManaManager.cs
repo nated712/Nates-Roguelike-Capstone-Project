@@ -68,7 +68,8 @@ public class HealthManaManager : MonoBehaviour
 
 
     public void Die(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //load death scene
+        SceneManager.LoadScene(3);
     }
     
 }

@@ -17,9 +17,10 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print("projectile collision");
+        
         if (other.CompareTag("Player"))
         {
+            print("projectile collision");
             HealthManaManager hm = other.GetComponent<HealthManaManager>();
             if (hm != null)
             {

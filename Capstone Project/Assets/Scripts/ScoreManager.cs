@@ -11,10 +11,12 @@ public class ScoreManager : MonoBehaviour
     {
         score = 0f;
         scoreText.text = score.ToString();
+        PersistentData.Instance.score = score;
     }
 
     public void AddScore(float scoreToAdd){
         score += scoreToAdd;
         scoreText.text = score.ToString();
+        PersistentData.Instance.score = score;
     }
 }

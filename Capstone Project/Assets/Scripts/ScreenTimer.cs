@@ -29,6 +29,7 @@ public class Timer : MonoBehaviour
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        PersistentData.Instance.timer = timerText.text;
     }
 
     public void StopTimer()
