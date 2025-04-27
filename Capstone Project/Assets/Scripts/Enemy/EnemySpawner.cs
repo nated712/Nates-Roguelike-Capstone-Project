@@ -4,9 +4,9 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public GameObject enemyPrefab2;
-    public float baseSpawnInterval = 2f;  // Starting interval
+    public float baseSpawnInterval = 3.5f;  // Starting interval
     public float minSpawnInterval = 0.05f; // Minimum cap for spawn speed
-    public float spawnDistance = 15f;
+    public float spawnDistance = 20f;
     public Vector2 spawnRange = new Vector2(20f, 10f);
     public bool debugSpawnArea = true;
 
@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
     {
         // Calculate spawn interval based on time since level load
         float timeElapsed = Time.timeSinceLevelLoad;
-        currentSpawnInterval = Mathf.Max(minSpawnInterval, baseSpawnInterval - (timeElapsed / 60f)); // Every 60s, reduce interval
+        currentSpawnInterval = Mathf.Max(minSpawnInterval, baseSpawnInterval - (Mathf.Sqrt(timeElapsed) / 10f));
         //print(currentSpawnInterval);
         // Spawn based on interval
         if (Time.time - lastSpawnTime >= currentSpawnInterval)

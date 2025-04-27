@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: efe2c8f2df36faa44a5d8037eca2da3c
+guid: c4526a1ebb435004eb8bef1970c3c5bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -886762994976223184
-    second: seta-de-upgrade_0
+      213: 1949154313807072681
+    second: crosshair193_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 7
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: seta-de-upgrade_0
+      name: crosshair193_0
       rect:
         serializedVersion: 2
-        x: 384
-        y: 587
-        width: 114
-        height: 155
+        x: 21
+        y: 21
+        width: 22
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0301b7c11c591b3f0800000000000000
-      internalID: -886762994976223184
+      spriteID: 9ad04e67589cc0b10800000000000000
+      internalID: 1949154313807072681
       vertices: []
       indices: 
       edges: []
