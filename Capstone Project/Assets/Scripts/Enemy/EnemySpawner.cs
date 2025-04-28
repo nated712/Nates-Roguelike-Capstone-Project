@@ -5,13 +5,14 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject enemyPrefab2;
     public float baseSpawnInterval = 3.5f;  // Starting interval
-    public float minSpawnInterval = 0.05f; // Minimum cap for spawn speed
     public float spawnDistance = 20f;
     public Vector2 spawnRange = new Vector2(20f, 10f);
     public bool debugSpawnArea = true;
 
     private float currentSpawnInterval;
     private float lastSpawnTime;
+
+    private float[] minSpawnIntervals = { 1.0f, 0.7f, 0.5f, 0.3f, 0.2f }; // Based upon 0-5, 5-10, 10-15, 15-20, 20+ minutes
 
     private void Start()
     {
@@ -21,11 +22,14 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        // Calculate spawn interval based on time since level load
         float timeElapsed = Time.timeSinceLevelLoad;
-        currentSpawnInterval = Mathf.Max(minSpawnInterval, baseSpawnInterval - (Mathf.Sqrt(timeElapsed) / 10f));
-        //print(currentSpawnInterval);
-        // Spawn based on interval
+
+        float minInterval = GetMinSpawnInterval(timeElapsed);
+
+        // Spawn interval shrinks faster using a sharper curve
+        float difficultyMultiplier = Mathf.Sqrt(timeElapsed) * 0.5f;
+        currentSpawnInterval = Mathf.Max(minInterval, baseSpawnInterval - difficultyMultiplier);
+
         if (Time.time - lastSpawnTime >= currentSpawnInterval)
         {
             SpawnEnemy();
@@ -36,11 +40,12 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         Vector3 spawnPosition = GetRandomSpawnPosition();
-        int roll = Random.Range(0,11);
-        if (roll == 10)
+        int roll = Random.Range(0, 8);
+        if (roll == 7)
         {
             Instantiate(enemyPrefab2, spawnPosition, Quaternion.identity);
-        } else
+        }
+        else
         {
             Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
         }
@@ -55,8 +60,22 @@ public class EnemySpawner : MonoBehaviour
             randomX = transform.position.x + spawnDistance * (Random.value > 0.5f ? 1 : -1);
         else
             randomY = transform.position.y + spawnDistance * (Random.value > 0.5f ? 1 : -1);
-    
+
         return new Vector3(randomX, randomY, 0f);
+    }
+
+    private float GetMinSpawnInterval(float timeElapsed)
+    {
+        if (timeElapsed < 300f)         // 0–5 min
+            return minSpawnIntervals[0];
+        else if (timeElapsed < 600f)    // 5–10 min
+            return minSpawnIntervals[1];
+        else if (timeElapsed < 900f)    // 10–15 min
+            return minSpawnIntervals[2];
+        else if (timeElapsed < 1200f)   // 15–20 min
+            return minSpawnIntervals[3];
+        else                            // After 20 min
+            return minSpawnIntervals[4];
     }
 
     private void OnDrawGizmos()

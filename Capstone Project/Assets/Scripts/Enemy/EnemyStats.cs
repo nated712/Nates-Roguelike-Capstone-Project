@@ -13,16 +13,8 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] public GameObject killEffect;
     [SerializeField] public GameObject HPDrop;
     [SerializeField] public GameObject weaponUpgradeDrop;
-    public ScoreManager scoreManager;
-    private GameObject player;
-    
-    private static int totalKillCount = 0; // track total kills across all enemies
-    private int increaseKillsforGuaranteedUpgrade = 5;
-    private int requiredKills = 5;
-
-    [SerializeField] private Slider upgradeProgressSlider; 
-    int xpValue = 0; // XP value to track progress per enemy
-    
+    public ScoreManager scoreManager;  
+    private XPManager xpManager;  
     void Awake()
     {
         currentMoveSpeed = enemyData.MoveSpeed;
@@ -33,20 +25,13 @@ public class EnemyStats : MonoBehaviour
         {
             scoreManager = FindFirstObjectByType<ScoreManager>();
         }
-
-        player = GameObject.FindWithTag("Player");
-
-        // Ensure upgradeProgressSlider is found and initialized
-        upgradeProgressSlider = GameObject.Find("XPbar")?.GetComponent<Slider>();
-        if (upgradeProgressSlider != null)
-        {
-            upgradeProgressSlider.maxValue = requiredKills;
-            upgradeProgressSlider.value = totalKillCount % requiredKills; // Update based on total kills
-        }
+        xpManager = FindFirstObjectByType<XPManager>(); 
+        
     }
 
     public void takeDamage(float dmg)
     {
+        scoreManager.AddScore(5f);
         currentHealth -= dmg;
         Instantiate(hurtEffect, transform.position, Quaternion.identity);
         if (currentHealth <= 0)
@@ -58,19 +43,11 @@ public class EnemyStats : MonoBehaviour
     void Kill()
     {
         Instantiate(killEffect, transform.position, Quaternion.identity);
-        scoreManager.AddScore(100f);
-        
-        totalKillCount++; // Track total kills across all enemies
-        xpValue = totalKillCount % requiredKills; // Update xp value based on total kills
-        UpdateProgressBar();
+        scoreManager.AddScore(145f);
 
-        // Check for upgrade drop based on total kill count
-        if (totalKillCount >= requiredKills)
+        if (xpManager != null)
         {
-            Instantiate(weaponUpgradeDrop, player.transform.position, Quaternion.identity);
-            totalKillCount = 0; // Reset after upgrade drop
-            requiredKills += increaseKillsforGuaranteedUpgrade; // Increase required kills for next drop
-            upgradeProgressSlider.maxValue = requiredKills;
+            xpManager.RegisterEnemyKill(); // tell XP Manager 
         }
 
         int roll = Random.Range(0, 31); // Random chance Drops
@@ -82,15 +59,6 @@ public class EnemyStats : MonoBehaviour
         {
             Instantiate(HPDrop, transform.position, Quaternion.identity);
         }
-
         Destroy(gameObject);
-    }
-
-    void UpdateProgressBar()
-    {
-        if (upgradeProgressSlider != null)
-        {
-            upgradeProgressSlider.value = xpValue; // Update based on total kill count
-        }
     }
 }

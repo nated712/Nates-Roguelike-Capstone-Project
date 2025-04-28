@@ -1,64 +1,64 @@
 fileFormatVersion: 2
-guid: f4b54023d6b06df4c97fd72f43e8e20c
+guid: 2e00bcf081e3c244fb4f22f7561b96b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1342869322564901177
-    second: boss_debuff_0
+      213: -4475826641387603705
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_0
   - first:
-      213: -519519652704095134
-    second: boss_debuff_1
+      213: -7437671351932865399
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_1
   - first:
-      213: -5685260930841004088
-    second: boss_debuff_2
+      213: -2183815749681044551
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_2
   - first:
-      213: -2481872055492756174
-    second: boss_debuff_3
+      213: 6695510727638560767
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_3
   - first:
-      213: -118710415080907585
-    second: boss_debuff_4
+      213: -5336289936210209351
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_4
   - first:
-      213: -3728167878598152366
-    second: boss_debuff_5
+      213: -4028637064575011095
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_5
   - first:
-      213: -3861366829485626776
-    second: boss_debuff_6
+      213: -6355915372180416562
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_6
   - first:
-      213: 4886965708975104448
-    second: boss_debuff_7
+      213: -2851878418125885582
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_7
   - first:
-      213: 4219592624269993723
-    second: boss_debuff_8
+      213: 5173274648867488939
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_8
   - first:
-      213: -6681883991293110680
-    second: boss_debuff_9
+      213: -6426720537824289583
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_9
   - first:
-      213: 2830411625203628707
-    second: boss_debuff_10
+      213: 3357470358418275109
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_10
   - first:
-      213: 6568091916865389675
-    second: boss_debuff_11
+      213: 548164114476394806
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_11
   - first:
-      213: -3817090787578610442
-    second: boss_debuff_12
+      213: 6851934239848244573
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_12
   - first:
-      213: 5350811707183391099
-    second: boss_debuff_13
+      213: -9156465661374862214
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_13
   - first:
-      213: 1602879300300264295
-    second: boss_debuff_14
+      213: -4242234912546911988
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_14
   - first:
-      213: 3193130027327584404
-    second: boss_debuff_15
+      213: 4844917784763880735
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_15
   - first:
-      213: -7192554759657447546
-    second: boss_debuff_16
+      213: 2473289452286665164
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_16
   - first:
-      213: 5088354428497834214
-    second: boss_debuff_17
+      213: -6603639826827239424
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_17
   - first:
-      213: 4053263612290475795
-    second: boss_debuff_18
+      213: -4215162143188657852
+    second: SPUM_20250424201409657_OTHER2_5_debuff_0_18
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -154,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss_debuff_0
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1814
-        width: 237
-        height: 229
+        x: 65
+        y: 1866
+        width: 120
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9391047b884d2a210800000000000000
-      internalID: 1342869322564901177
+      spriteID: 709bcd3326ba2e1c0800000000000000
+      internalID: -4475826641387603705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_1
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_1
       rect:
         serializedVersion: 2
-        x: 259
-        y: 1814
-        width: 237
-        height: 230
+        x: 321
+        y: 1866
+        width: 120
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 264fcbed0ab4ac8f0800000000000000
-      internalID: -519519652704095134
+      spriteID: 98431f7df4518c890800000000000000
+      internalID: -7437671351932865399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_2
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_2
       rect:
         serializedVersion: 2
-        x: 515
-        y: 1814
-        width: 237
-        height: 232
+        x: 577
+        y: 1866
+        width: 120
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c7b0d12e45e911b0800000000000000
-      internalID: -5685260930841004088
+      spriteID: 9b3ab51652781b1e0800000000000000
+      internalID: -2183815749681044551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_3
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_3
       rect:
         serializedVersion: 2
-        x: 771
-        y: 1814
-        width: 238
-        height: 234
+        x: 833
+        y: 1866
+        width: 120
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23db26ad38e9e8dd0800000000000000
-      internalID: -2481872055492756174
+      spriteID: fffa6be488b3bec50800000000000000
+      internalID: 6695510727638560767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_4
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_4
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 1814
-        width: 241
-        height: 234
+        x: 1089
+        y: 1866
+        width: 121
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbc96f5a1814a5ef0800000000000000
-      internalID: -118710415080907585
+      spriteID: 9b5d2bd6390b1f5b0800000000000000
+      internalID: -5336289936210209351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_5
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_5
       rect:
         serializedVersion: 2
-        x: 1282
-        y: 1814
-        width: 243
-        height: 234
+        x: 1344
+        y: 1866
+        width: 123
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25fa22d2113e24cc0800000000000000
-      internalID: -3728167878598152366
+      spriteID: 9e6b8053fe76718c0800000000000000
+      internalID: -4028637064575011095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_6
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_6
       rect:
         serializedVersion: 2
-        x: 1538
-        y: 1814
-        width: 245
-        height: 234
+        x: 1600
+        y: 1866
+        width: 124
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,20 +301,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86a6805b35ba96ac0800000000000000
-      internalID: -3861366829485626776
+      spriteID: ec7ddb2e4a04bc7a0800000000000000
+      internalID: -6355915372180416562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_7
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_7
       rect:
         serializedVersion: 2
-        x: 1793
-        y: 1814
-        width: 247
-        height: 234
+        x: 1856
+        y: 1866
+        width: 125
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,20 +323,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c1e9f88b6df1d340800000000000000
-      internalID: 4886965708975104448
+      spriteID: 27fe00940b71c68d0800000000000000
+      internalID: -2851878418125885582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_8
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_8
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1558
-        width: 249
-        height: 235
+        x: 64
+        y: 1610
+        width: 125
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,20 +345,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf6a87aa2210f8a30800000000000000
-      internalID: 4219592624269993723
+      spriteID: ba4c74b42e92bc740800000000000000
+      internalID: 5173274648867488939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_9
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_9
       rect:
         serializedVersion: 2
-        x: 257
-        y: 1558
-        width: 250
-        height: 235
+        x: 320
+        y: 1610
+        width: 126
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,20 +367,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 866da9c79ed2543a0800000000000000
-      internalID: -6681883991293110680
+      spriteID: 1dc964898b3bfc6a0800000000000000
+      internalID: -6426720537824289583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_10
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_10
       rect:
         serializedVersion: 2
-        x: 513
-        y: 1558
-        width: 250
-        height: 235
+        x: 576
+        y: 1610
+        width: 126
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3aaf5608064a74720800000000000000
-      internalID: 2830411625203628707
+      spriteID: 52bbc699081289e20800000000000000
+      internalID: 3357470358418275109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_11
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_11
       rect:
         serializedVersion: 2
-        x: 769
-        y: 1558
-        width: 250
-        height: 235
+        x: 832
+        y: 1610
+        width: 126
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,20 +411,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6440e49ccc862b50800000000000000
-      internalID: 6568091916865389675
+      spriteID: 6396bf99b587b9700800000000000000
+      internalID: 548164114476394806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_12
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_12
       rect:
         serializedVersion: 2
-        x: 1025
-        y: 1558
-        width: 249
-        height: 235
+        x: 1088
+        y: 1610
+        width: 125
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,20 +433,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fcf5fa0728f60bc0800000000000000
-      internalID: -3817090787578610442
+      spriteID: d55ad7653e5f61f50800000000000000
+      internalID: 6851934239848244573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_13
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_13
       rect:
         serializedVersion: 2
-        x: 1281
-        y: 1558
-        width: 247
-        height: 235
+        x: 1344
+        y: 1610
+        width: 125
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,20 +455,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b71eaaad5e6e14a40800000000000000
-      internalID: 5350811707183391099
+      spriteID: a7c60b77ef2bde080800000000000000
+      internalID: -9156465661374862214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_14
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_14
       rect:
         serializedVersion: 2
-        x: 1538
-        y: 1558
-        width: 245
-        height: 235
+        x: 1600
+        y: 1610
+        width: 124
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,20 +477,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76359303b329e3610800000000000000
-      internalID: 1602879300300264295
+      spriteID: c0981e7c2dd8025c0800000000000000
+      internalID: -4242234912546911988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_15
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_15
       rect:
         serializedVersion: 2
-        x: 1794
-        y: 1558
-        width: 243
-        height: 235
+        x: 1856
+        y: 1610
+        width: 123
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,20 +499,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4987e7887d6405c20800000000000000
-      internalID: 3193130027327584404
+      spriteID: f15d2d64e0b9c3340800000000000000
+      internalID: 4844917784763880735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_16
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_16
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1302
-        width: 241
-        height: 235
+        x: 65
+        y: 1354
+        width: 121
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,20 +521,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68f921bcd89ee2c90800000000000000
-      internalID: -7192554759657447546
+      spriteID: cc1644e17a3e25220800000000000000
+      internalID: 2473289452286665164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_17
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_17
       rect:
         serializedVersion: 2
-        x: 259
-        y: 1302
-        width: 238
-        height: 234
+        x: 321
+        y: 1354
+        width: 120
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,20 +543,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e036e9b4677d9640800000000000000
-      internalID: 5088354428497834214
+      spriteID: 0002759a0982b54a0800000000000000
+      internalID: -6603639826827239424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_debuff_18
+      name: SPUM_20250424201409657_OTHER2_5_debuff_0_18
       rect:
         serializedVersion: 2
-        x: 515
-        y: 1302
-        width: 237
-        height: 232
+        x: 577
+        y: 1354
+        width: 120
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,8 +565,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 317279fb7c5104830800000000000000
-      internalID: 4053263612290475795
+      spriteID: 449d0981d5cb085c0800000000000000
+      internalID: -4215162143188657852
       vertices: []
       indices: 
       edges: []
@@ -585,25 +585,25 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      boss_debuff_0: 1342869322564901177
-      boss_debuff_1: -519519652704095134
-      boss_debuff_10: 2830411625203628707
-      boss_debuff_11: 6568091916865389675
-      boss_debuff_12: -3817090787578610442
-      boss_debuff_13: 5350811707183391099
-      boss_debuff_14: 1602879300300264295
-      boss_debuff_15: 3193130027327584404
-      boss_debuff_16: -7192554759657447546
-      boss_debuff_17: 5088354428497834214
-      boss_debuff_18: 4053263612290475795
-      boss_debuff_2: -5685260930841004088
-      boss_debuff_3: -2481872055492756174
-      boss_debuff_4: -118710415080907585
-      boss_debuff_5: -3728167878598152366
-      boss_debuff_6: -3861366829485626776
-      boss_debuff_7: 4886965708975104448
-      boss_debuff_8: 4219592624269993723
-      boss_debuff_9: -6681883991293110680
+      SPUM_20250424201409657_OTHER2_5_debuff_0_0: -4475826641387603705
+      SPUM_20250424201409657_OTHER2_5_debuff_0_1: -7437671351932865399
+      SPUM_20250424201409657_OTHER2_5_debuff_0_10: 3357470358418275109
+      SPUM_20250424201409657_OTHER2_5_debuff_0_11: 548164114476394806
+      SPUM_20250424201409657_OTHER2_5_debuff_0_12: 6851934239848244573
+      SPUM_20250424201409657_OTHER2_5_debuff_0_13: -9156465661374862214
+      SPUM_20250424201409657_OTHER2_5_debuff_0_14: -4242234912546911988
+      SPUM_20250424201409657_OTHER2_5_debuff_0_15: 4844917784763880735
+      SPUM_20250424201409657_OTHER2_5_debuff_0_16: 2473289452286665164
+      SPUM_20250424201409657_OTHER2_5_debuff_0_17: -6603639826827239424
+      SPUM_20250424201409657_OTHER2_5_debuff_0_18: -4215162143188657852
+      SPUM_20250424201409657_OTHER2_5_debuff_0_2: -2183815749681044551
+      SPUM_20250424201409657_OTHER2_5_debuff_0_3: 6695510727638560767
+      SPUM_20250424201409657_OTHER2_5_debuff_0_4: -5336289936210209351
+      SPUM_20250424201409657_OTHER2_5_debuff_0_5: -4028637064575011095
+      SPUM_20250424201409657_OTHER2_5_debuff_0_6: -6355915372180416562
+      SPUM_20250424201409657_OTHER2_5_debuff_0_7: -2851878418125885582
+      SPUM_20250424201409657_OTHER2_5_debuff_0_8: 5173274648867488939
+      SPUM_20250424201409657_OTHER2_5_debuff_0_9: -6426720537824289583
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

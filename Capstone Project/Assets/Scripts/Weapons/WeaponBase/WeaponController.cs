@@ -30,9 +30,12 @@ public class WeaponController : MonoBehaviour
             Attack();  
         }
     }
-
+    public void UpgradeCooldown(float amount)
+    {
+        MaxCooldown = Mathf.Max(0.1f, MaxCooldown - amount); // lower limit to prevent 0 or negative cooldown
+    }
     protected virtual void Attack(){
-        currentCooldown = weaponData.CooldownDuration;
+        currentCooldown = MaxCooldown;
 
     }
 }

@@ -106,11 +106,11 @@ MonoBehaviour:
   specialProj: {fileID: 2688744571237527861, guid: bc9078056fe2dfe48baa9968241a85b9, type: 3}
   tier3Proj: {fileID: 5270478755463840894, guid: e3d41a1c5c22e6d41935149d03295ed5, type: 3}
   spawnPoint: {fileID: 2200717630419740916}
-  shotsToSpecial: 5
-  shotsToSpecial2: 5
+  shotsToSpecial: 12
+  shotsToSpecial2: 12
   hmm: {fileID: 6137334837919646212}
   spellManaCost: 7
-  shootDelay: 0.4
+  shootDelay: 0.6
 --- !u!1 &1232537757927729112
 GameObject:
   m_ObjectHideFlags: 0

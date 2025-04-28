@@ -291,7 +291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000026703, y: -149.2365}
+  m_AnchoredPosition: {x: 0.000026703, y: -207}
   m_SizeDelta: {x: 432, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115465721
@@ -725,7 +725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -328}
+  m_AnchoredPosition: {x: 0, y: -393.7}
   m_SizeDelta: {x: 432, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074047986
@@ -1042,7 +1042,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00002861, y: 25}
+  m_AnchoredPosition: {x: -0.00002861, y: -43}
   m_SizeDelta: {x: 432, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403590726
@@ -1287,8 +1287,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 303}
-  m_SizeDelta: {x: 1128.0354, y: 211.1871}
+  m_AnchoredPosition: {x: 0, y: 273}
+  m_SizeDelta: {x: 1440.6982, y: 211.1871}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1568696147
 MonoBehaviour:
@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mystic Warfront
+  m_text: 'Goblin Warfront: Necromancer''s Return'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 327c2ac66d6da4d479828dd4a3d948db, type: 2}
   m_sharedMaterial: {fileID: 7934263634595420643, guid: 327c2ac66d6da4d479828dd4a3d948db, type: 2}
