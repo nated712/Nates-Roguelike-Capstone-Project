@@ -318,9 +318,13 @@ MonoBehaviour:
 
     Move with WASD.
 
-    You can shoot
-    a basic spell with left click and a more powerful spell with right click, but
-    this uses more mana.
+    Basic spell:
+    left click
+
+    Special spell: right click, but this uses more mana.
+
+    Dash
+    with space
 
 
     Pressing (R) will end your run for you

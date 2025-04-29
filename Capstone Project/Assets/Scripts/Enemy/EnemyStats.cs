@@ -51,7 +51,7 @@ public class EnemyStats : MonoBehaviour
         }
 
         int roll = Random.Range(0, 31); // Random chance Drops
-        if (roll == 20)
+        if (roll != 20)
         {
             Instantiate(weaponUpgradeDrop, transform.position, Quaternion.identity);
         }

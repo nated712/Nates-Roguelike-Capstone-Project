@@ -9,7 +9,6 @@ public class WeaponUpgrades : MonoBehaviour
     [SerializeField] private int specialShotReduction = 1;
     [SerializeField] private int specialShotReduction2 = 1;
     [SerializeField] private int minShotsToSpecial = 2;
-
     [SerializeField] private TextMeshProUGUI upgradeText;
 
     private enum UpgradeType
@@ -42,7 +41,7 @@ public class WeaponUpgrades : MonoBehaviour
                 {
                     upgradeText = GameObject.Find("UpgradeText").GetComponent<TextMeshProUGUI>();
                 }
-
+                print("Fix this must level up from in here");
                 ApplyRandomUpgrade(spellManager, other.gameObject);
                 Destroy(gameObject); // Remove the pickup after use
             }
