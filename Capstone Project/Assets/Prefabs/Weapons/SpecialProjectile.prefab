@@ -105,8 +105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projSpeed: 25
   destroyTime: 5
-  damage: 5
-  pierce: 2
+  damage: 6
+  pierce: 1
 --- !u!50 &3198940569902239615
 Rigidbody2D:
   serializedVersion: 5

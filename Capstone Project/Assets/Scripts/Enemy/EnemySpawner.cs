@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     private float bossSpawnInterval = 180f;
     private float nextBossSpawnTime = 180f;
 
-    private float[] minSpawnIntervals = { 0.8f, 0.5f, 0.2f, 0.05f, 0.01f }; // Based upon 0-2, 2-4, 4-6, 6-8, 10+ minutes
+    private float[] minSpawnIntervals = { 0.8f, 0.65f, 0.3f, 0.1f, 0.01f }; // Based upon 0-2, 2-4, 4-6, 6-8, 10+ minutes
     //will update with spawn intervals so game gets harder per 2 minutes
     private float[] GetEnemySpawnWeights(float time)
     {
@@ -46,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
         float minInterval = GetMinSpawnInterval(timeElapsed);
 
         // Spawn interval shrinks as a curve
-        float difficultyMultiplier = Mathf.Sqrt(timeElapsed) * 0.7f;
+        float difficultyMultiplier = Mathf.Sqrt(timeElapsed) * 0.1f;
         currentSpawnInterval = Mathf.Max(minInterval, baseSpawnInterval - difficultyMultiplier);
         Debug.Log($"Spawn interval: {currentSpawnInterval:F2}s at {timeElapsed:F0}s");
 

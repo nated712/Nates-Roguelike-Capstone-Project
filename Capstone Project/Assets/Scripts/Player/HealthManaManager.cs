@@ -6,7 +6,7 @@ public class HealthManaManager : MonoBehaviour
 {
     public float maxMana = 100f;
     public float currentMana;
-    public float manaRegenRate = 7f;
+    public float manaRegenRate = 9f;
     public float maxHealth = 100f;
     public float currentHP;
     public Slider HPslider;

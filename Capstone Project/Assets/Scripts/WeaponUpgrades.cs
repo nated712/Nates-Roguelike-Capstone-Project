@@ -31,32 +31,7 @@ public class WeaponUpgrades : MonoBehaviour
     private int shieldCooldownUpgradeCount = 0;
     private int spearCooldownUpgradeCount = 0;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            if (xpManager == null)
-            {
-                xpManager = FindFirstObjectByType<XPManager>();
-            }
-            BasicSpellManager spellManager = other.GetComponentInChildren<BasicSpellManager>();
-            if (spellManager != null)
-            {
-                // Find the UpgradeText in the scene if it's not already set
-                if (upgradeText == null)
-                {
-                    upgradeText = GameObject.Find("UpgradeText").GetComponent<TextMeshProUGUI>();
-                }
-                xpManager.LevelUp();
-                ApplyRandomUpgrade(spellManager, other.gameObject);
-                Destroy(gameObject); // Remove the pickup after use
-            }
-
-
-        }
-    }
-
-    private void ApplyRandomUpgrade(BasicSpellManager spellManager, GameObject player)
+    public void ApplyRandomUpgrade(BasicSpellManager spellManager, GameObject player)
     {
         UpgradeType upgrade = (UpgradeType)Random.Range(0, System.Enum.GetValues(typeof(UpgradeType)).Length);
         string message = "";

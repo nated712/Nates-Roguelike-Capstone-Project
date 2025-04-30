@@ -13,8 +13,11 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] public GameObject killEffect;
     [SerializeField] public GameObject HPDrop;
     [SerializeField] public GameObject weaponUpgradeDrop;
+    [SerializeField] public float enemyScoreValue;
+    [SerializeField] public int enemyKillValue;
     public ScoreManager scoreManager;  
     private XPManager xpManager;  
+    public BossUI bossUI; // Reference to Boss UI
     void Awake()
     {
         currentMoveSpeed = enemyData.MoveSpeed;
@@ -33,6 +36,12 @@ public class EnemyStats : MonoBehaviour
     {
         scoreManager.AddScore(5f);
         currentHealth -= dmg;
+
+        if (bossUI != null)
+        {
+            bossUI.TakeDamage(dmg);  // Update the health in BossUI
+        }
+        
         Instantiate(hurtEffect, transform.position, Quaternion.identity);
         if (currentHealth <= 0)
         {
@@ -43,15 +52,15 @@ public class EnemyStats : MonoBehaviour
     void Kill()
     {
         Instantiate(killEffect, transform.position, Quaternion.identity);
-        scoreManager.AddScore(145f);
+        scoreManager.AddScore(enemyScoreValue);
 
         if (xpManager != null)
         {
-            xpManager.RegisterEnemyKill(); // tell XP Manager 
+            xpManager.GainXP(enemyKillValue); // tell XP Manager 
         }
 
         int roll = Random.Range(0, 31); // Random chance Drops
-        if (roll != 20)
+        if (roll == 20)
         {
             Instantiate(weaponUpgradeDrop, transform.position, Quaternion.identity);
         }

@@ -176,6 +176,8 @@ MonoBehaviour:
   killEffect: {fileID: 1315667110004280502, guid: ba3d389520beb10428d8622e91dc1518, type: 3}
   HPDrop: {fileID: 4459389006661986236, guid: fb096747f03ac6048aaf4ceb6b4be1f6, type: 3}
   weaponUpgradeDrop: {fileID: 4755212950972126449, guid: 2e0aef6f6e6ce1d42967d1aaa05e08a4, type: 3}
+  enemyScoreValue: 100
+  enemyKillValue: 1
   scoreManager: {fileID: 0}
 --- !u!114 &4175469171291345914
 MonoBehaviour:

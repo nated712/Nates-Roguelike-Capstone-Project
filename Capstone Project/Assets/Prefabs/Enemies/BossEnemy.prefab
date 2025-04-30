@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4981659446968743946}
   - component: {fileID: 2124876600758101783}
   - component: {fileID: 8469871423283952572}
+  - component: {fileID: 5682007645596001339}
   - component: {fileID: 5997288891342086743}
   - component: {fileID: 1353535087604592259}
   m_Layer: 8
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.66, y: 4.91, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -147,7 +148,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.049533725, y: 0.03891939}
+  m_Offset: {x: 0.022622883, y: 0.07928544}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -157,8 +158,25 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.1990674, y: 1.348601}
+  m_Size: {x: 1.1452457, y: 1.0794934}
   m_EdgeRadius: 0
+--- !u!114 &5682007645596001339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5371990607885849860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a239f23cd59434b8cd9d50ce3b19ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossCanvas: {fileID: 0}
+  healthSlider: {fileID: 0}
+  bossNameText: {fileID: 0}
+  bossName: Lord of the Horde, Wendell
+  enemyData: {fileID: 11400000, guid: b19cc694f00bae7469119ef9e1e3e0d9, type: 2}
 --- !u!114 &5997288891342086743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +194,10 @@ MonoBehaviour:
   killEffect: {fileID: 1315667110004280502, guid: ba3d389520beb10428d8622e91dc1518, type: 3}
   HPDrop: {fileID: 4459389006661986236, guid: fb096747f03ac6048aaf4ceb6b4be1f6, type: 3}
   weaponUpgradeDrop: {fileID: 4755212950972126449, guid: 2e0aef6f6e6ce1d42967d1aaa05e08a4, type: 3}
+  enemyScoreValue: 5000
+  enemyKillValue: 20
   scoreManager: {fileID: 0}
+  bossUI: {fileID: 5682007645596001339}
 --- !u!114 &1353535087604592259
 MonoBehaviour:
   m_ObjectHideFlags: 0
