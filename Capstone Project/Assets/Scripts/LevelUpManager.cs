@@ -44,12 +44,11 @@ public class XPManager : MonoBehaviour
         }
     }
 
-    private void LevelUp()
+    public void LevelUp()
     {
         currentLevel++;
         levelEffect.Play();
         levelText.text = currentLevel.ToString();
-        Instantiate(weaponUpgradeDrop, player.transform.position, Quaternion.identity);
         lastUpgradeKillCount = totalKillCount;
         requiredKills += increaseKillsForNextUpgrade;
 

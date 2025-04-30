@@ -11,13 +11,28 @@ public class EnemySpawner : MonoBehaviour
     public float spawnDistance = 20f;
     public Vector2 spawnRange = new Vector2(20f, 10f);
     public bool debugSpawnArea = true;
-
     private float currentSpawnInterval; //can be printed to show how fast enemies spawn speed progresses
     private float lastSpawnTime;
     private float timeElapsed;
+    private float bossSpawnInterval = 180f;
+    private float nextBossSpawnTime = 180f;
 
-    private float[] minSpawnIntervals = { 2.0f, 1.4f, 0.8f, 0.3f, 0.05f }; // Based upon 0-2, 2-4, 4-6, 6-8, 10+ minutes
-
+    private float[] minSpawnIntervals = { 0.8f, 0.5f, 0.2f, 0.05f, 0.01f }; // Based upon 0-2, 2-4, 4-6, 6-8, 10+ minutes
+    //will update with spawn intervals so game gets harder per 2 minutes
+    private float[] GetEnemySpawnWeights(float time)
+    {
+        // Order: enemyPrefab, enemyPrefab2, enemyPrefab3, enemyPrefab4
+        if (time < 120f)         // 0–2 min
+            return new float[] { 0.8f, 0.10f, 0.05f, 0.05f };
+        else if (time < 240f)    // 2–4 min
+            return new float[] { 0.5f, 0.15f, 0.2f, 0.15f };
+        else if (time < 360f)    // 4–6 min
+            return new float[] { 0.2f, 0.2f, 0.4f, 0.2f };
+        else if (time < 480f)    // 6–8 min
+            return new float[] { 0.05f, 0.25f, 0.3f, 0.4f };
+        else                     // 8+ min
+            return new float[] { 0.15f, 0.25f, 0.30f, 0.35f };
+    }
     private void Start()
     {
         currentSpawnInterval = baseSpawnInterval;
@@ -31,9 +46,16 @@ public class EnemySpawner : MonoBehaviour
         float minInterval = GetMinSpawnInterval(timeElapsed);
 
         // Spawn interval shrinks as a curve
-        float difficultyMultiplier = Mathf.Sqrt(timeElapsed) * 0.5f;
+        float difficultyMultiplier = Mathf.Sqrt(timeElapsed) * 0.7f;
         currentSpawnInterval = Mathf.Max(minInterval, baseSpawnInterval - difficultyMultiplier);
+        Debug.Log($"Spawn interval: {currentSpawnInterval:F2}s at {timeElapsed:F0}s");
 
+        if (timeElapsed >= nextBossSpawnTime)
+        {
+            Vector3 bossSpawnPos = GetRandomSpawnPosition();
+            Instantiate(bossPrefab, bossSpawnPos, Quaternion.identity);
+            nextBossSpawnTime += bossSpawnInterval; // Schedule next boss
+        }
         if (Time.time - lastSpawnTime >= currentSpawnInterval)
         {
             SpawnEnemy();
@@ -44,27 +66,23 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         Vector3 spawnPosition = GetRandomSpawnPosition();
-        int roll = Random.Range(0, 20);
-        if (roll >= 7 && roll <= 8)
-        {
-            Instantiate(enemyPrefab2, spawnPosition, Quaternion.identity);
-        }
-        if (roll == 6)
-        {
-            Instantiate(enemyPrefab3, spawnPosition, Quaternion.identity);
-        }
-        if (roll == 5)
-        {
-            Instantiate(enemyPrefab4, spawnPosition, Quaternion.identity);
-        }
-        else
-        {
+        float[] weights = GetEnemySpawnWeights(timeElapsed);
+        float total = 0f;
+
+        foreach (float w in weights)
+            total += w;
+
+        float rand = Random.Range(0f, total);
+        float cumulative = 0f;
+
+        if ((cumulative += weights[0]) >= rand)
             Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-        }
-        if(timeElapsed == 180f)
-        {
-            Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
-        }
+        else if ((cumulative += weights[1]) >= rand)
+            Instantiate(enemyPrefab2, spawnPosition, Quaternion.identity);
+        else if ((cumulative += weights[2]) >= rand)
+            Instantiate(enemyPrefab3, spawnPosition, Quaternion.identity);
+        else
+            Instantiate(enemyPrefab4, spawnPosition, Quaternion.identity);
 
     }
 

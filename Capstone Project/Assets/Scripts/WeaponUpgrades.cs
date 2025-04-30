@@ -10,6 +10,8 @@ public class WeaponUpgrades : MonoBehaviour
     [SerializeField] private int specialShotReduction2 = 1;
     [SerializeField] private int minShotsToSpecial = 2;
     [SerializeField] private TextMeshProUGUI upgradeText;
+    private XPManager xpManager;
+
 
     private enum UpgradeType
     {
@@ -33,6 +35,10 @@ public class WeaponUpgrades : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (xpManager == null)
+            {
+                xpManager = FindFirstObjectByType<XPManager>();
+            }
             BasicSpellManager spellManager = other.GetComponentInChildren<BasicSpellManager>();
             if (spellManager != null)
             {
@@ -41,10 +47,12 @@ public class WeaponUpgrades : MonoBehaviour
                 {
                     upgradeText = GameObject.Find("UpgradeText").GetComponent<TextMeshProUGUI>();
                 }
-                print("Fix this must level up from in here");
+                xpManager.LevelUp();
                 ApplyRandomUpgrade(spellManager, other.gameObject);
                 Destroy(gameObject); // Remove the pickup after use
             }
+
+
         }
     }
 
