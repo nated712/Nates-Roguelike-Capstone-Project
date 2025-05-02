@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2076591492532562469}
   - component: {fileID: 7618703893769127140}
   - component: {fileID: -4567783027592814302}
+  - component: {fileID: -1028358315628020116}
   m_Layer: 0
   m_Name: KillEffect
   m_TagString: Untagged
@@ -4847,3 +4848,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAfterSeconds: 0.5
+--- !u!114 &-1028358315628020116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315667110004280502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d13551e816d4b449491e22c6419732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: 92f7dd4e79176854cb2ca83bfc770fdf, type: 3}
+  volume: 0.17
+  pitch: 1.18
+  use3DSound: 0

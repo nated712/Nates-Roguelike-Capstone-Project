@@ -4,8 +4,8 @@ using System.Collections; // Needed for IEnumerator
 
 public class WeaponUpgrades : MonoBehaviour
 {
-    [SerializeField] private float shootDelayReduction = 0.03f;
-    [SerializeField] private float manaCostReduction = 1f;
+    [SerializeField] private float shootDelayReduction = 0.15f;
+    [SerializeField] private float manaCostReduction = 1.3f;
     [SerializeField] private int specialShotReduction = 1;
     [SerializeField] private int specialShotReduction2 = 1;
     [SerializeField] private int minShotsToSpecial = 2;
@@ -46,7 +46,7 @@ public class WeaponUpgrades : MonoBehaviour
                     shootDelayUpgradeCount++;
                     float scaledShootDelay = Mathf.Max(
                         shootDelayReduction * Mathf.Pow(0.5f, shootDelayUpgradeCount - 1),
-                        shootDelayReduction * 0.05f // Minimum 5% effectiveness
+                        shootDelayReduction * 0.1f // Minimum 5% effectiveness
                     );
                     spellManager.ReduceShootDelay(scaledShootDelay);
                     message = "Upgraded Shooting Speed!";
@@ -57,7 +57,7 @@ public class WeaponUpgrades : MonoBehaviour
                     manaCostUpgradeCount++;
                     float scaledManaCost = Mathf.Max(
                         manaCostReduction * Mathf.Pow(0.75f, manaCostUpgradeCount - 1),
-                        manaCostReduction * 0.1f
+                        manaCostReduction * 0.2f
                     );
                     spellManager.ReduceManaCost(scaledManaCost);
                     message = "Upgraded Max Mana!";
@@ -98,9 +98,10 @@ public class WeaponUpgrades : MonoBehaviour
 
                 case UpgradeType.ShieldCooldown:
                     shieldCooldownUpgradeCount++;
+                    //scaling upgrades so player doesnt get too strong too fast
                     float scaledShieldCooldown = Mathf.Max(
-                        0.2f * Mathf.Pow(0.75f, shieldCooldownUpgradeCount - 1),
-                        0.2f * 0.1f
+                        0.5f * Mathf.Pow(0.5f, shieldCooldownUpgradeCount - 1),
+                        0.15f
                     );
                     ShieldController shieldController = player.GetComponentInChildren<ShieldController>();
                     if (shieldController != null)
@@ -117,9 +118,10 @@ public class WeaponUpgrades : MonoBehaviour
 
                 case UpgradeType.SpearCooldown:
                     spearCooldownUpgradeCount++;
+                    //scaling upgrades so player doesnt get too strong too fast
                     float scaledSpearCooldown = Mathf.Max(
-                        0.2f * Mathf.Pow(0.75f, shieldCooldownUpgradeCount - 1),
-                        0.2f * 0.1f
+                        0.6f * Mathf.Pow(0.45f, shieldCooldownUpgradeCount - 1),
+                        0.15f
                     );
                     SpearController spearController = player.GetComponentInChildren<SpearController>();
                     if (spearController != null)
@@ -141,7 +143,7 @@ public class WeaponUpgrades : MonoBehaviour
         {
             upgradeText.text = message;
             upgradeText.gameObject.SetActive(true);
-            StartCoroutine(HideTextAfterDelay(2f));
+            StartCoroutine(HideTextAfterDelay(5f));
         }
     }
 

@@ -10,14 +10,13 @@ public class EnemySpawner : MonoBehaviour
     public float baseSpawnInterval = 2.5f;  // Starting interval
     public float spawnDistance = 20f;
     public Vector2 spawnRange = new Vector2(20f, 10f);
-    public bool debugSpawnArea = true;
     private float currentSpawnInterval; //can be printed to show how fast enemies spawn speed progresses
     private float lastSpawnTime;
     private float timeElapsed;
-    private float bossSpawnInterval = 180f;
+    private float bossSpawnInterval = 120f;
     private float nextBossSpawnTime = 180f;
 
-    private float[] minSpawnIntervals = { 0.8f, 0.65f, 0.3f, 0.1f, 0.01f }; // Based upon 0-2, 2-4, 4-6, 6-8, 10+ minutes
+    private float[] minSpawnIntervals = { 0.8f, 0.68f, 0.5f, 0.4f, 0.1f }; // Based upon 0-2, 2-4, 4-6, 6-8, 10+ minutes
     //will update with spawn intervals so game gets harder per 2 minutes
     private float[] GetEnemySpawnWeights(float time)
     {
@@ -48,10 +47,10 @@ public class EnemySpawner : MonoBehaviour
         // Spawn interval shrinks as a curve
         float difficultyMultiplier = Mathf.Sqrt(timeElapsed) * 0.1f;
         currentSpawnInterval = Mathf.Max(minInterval, baseSpawnInterval - difficultyMultiplier);
-        Debug.Log($"Spawn interval: {currentSpawnInterval:F2}s at {timeElapsed:F0}s");
 
         if (timeElapsed >= nextBossSpawnTime)
         {
+            print("Boss Spawning");
             Vector3 bossSpawnPos = GetRandomSpawnPosition();
             Instantiate(bossPrefab, bossSpawnPos, Quaternion.identity);
             nextBossSpawnTime += bossSpawnInterval; // Schedule next boss
@@ -111,20 +110,5 @@ public class EnemySpawner : MonoBehaviour
             return minSpawnIntervals[3];
         else                            // After 8 min
             return minSpawnIntervals[4];
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (!debugSpawnArea) return;
-
-        Gizmos.color = Color.green;
-        Vector3 bottomLeft = new Vector3(transform.position.x - spawnRange.x, transform.position.y - spawnRange.y, transform.position.z);
-        Vector3 topRight = new Vector3(transform.position.x + spawnRange.x, transform.position.y + spawnRange.y, transform.position.z);
-
-        Gizmos.DrawLine(bottomLeft, new Vector3(bottomLeft.x, topRight.y, bottomLeft.z));
-        Gizmos.DrawLine(bottomLeft, new Vector3(topRight.x, bottomLeft.y, bottomLeft.z));
-        Gizmos.DrawLine(topRight, new Vector3(topRight.x, bottomLeft.y, topRight.z));
-        Gizmos.DrawLine(topRight, new Vector3(bottomLeft.x, topRight.y, topRight.z));
-        Gizmos.DrawWireSphere(transform.position, 0.5f);
     }
 }

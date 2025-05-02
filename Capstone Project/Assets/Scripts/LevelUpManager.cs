@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using JetBrains.Annotations;
 
+
 public class XPManager : MonoBehaviour
 {
     [SerializeField] private Slider upgradeProgressSlider;
@@ -12,12 +13,15 @@ public class XPManager : MonoBehaviour
     [SerializeField] public GameObject HPDrop;
     private GameObject player;
     public TextMeshProUGUI levelText;
+    public TextMeshProUGUI xpGainText;
     private int totalKillCount = 0;
     private int lastUpgradeKillCount = 0;
     public int requiredKills = 5;
-    private int increaseKillsForNextUpgrade = 3;
+    private int increaseKillsForNextUpgrade = 2;
     private int currentLevel = 1;
     public ParticleSystem levelEffect;
+    public AudioClip levelUpSound;
+    private AudioSource audioSource;
 
     void Awake()
     {
@@ -33,12 +37,13 @@ public class XPManager : MonoBehaviour
             upgradeProgressSlider.value = 0;
         }
         levelText.text = currentLevel.ToString();
+        xpGainText.text = "";
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void RegisterEnemyKill(int value)
     {
         totalKillCount += value;
-
         // Loop to allow for multiple level-ups at once if xp is a lot
         while (totalKillCount - lastUpgradeKillCount >= requiredKills)
         {
@@ -54,6 +59,11 @@ public class XPManager : MonoBehaviour
         currentLevel++;
         levelEffect.Play();
         levelText.text = currentLevel.ToString();
+
+        if (levelUpSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(levelUpSound);
+        }
 
         lastUpgradeKillCount += requiredKills;
         requiredKills += increaseKillsForNextUpgrade;
@@ -82,7 +92,7 @@ public class XPManager : MonoBehaviour
     public void GainXP(int amount)
     {
         totalKillCount += amount;
-
+        StartCoroutine(ShowXPGain("+" + amount + "XP"));
         while (totalKillCount - lastUpgradeKillCount >= requiredKills)
         {
             LevelUp();
@@ -105,5 +115,13 @@ public class XPManager : MonoBehaviour
         upgradeHandler.ApplyRandomUpgrade(spellManager, player);
     }
 }
+
+private IEnumerator ShowXPGain(string text)
+{
+    xpGainText.text = text;
+    yield return new WaitForSeconds(1f); // Adjust duration as needed
+    xpGainText.text = "";
+}
+
 
 }

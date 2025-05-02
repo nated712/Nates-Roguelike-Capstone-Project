@@ -12,6 +12,7 @@ public class ProjectileBehavior : MonoBehaviour
 
 
     [SerializeField] private int pierce;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

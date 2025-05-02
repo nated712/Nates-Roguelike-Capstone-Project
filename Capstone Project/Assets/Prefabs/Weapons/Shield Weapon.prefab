@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2739528637586746647}
   - component: {fileID: 8695834551247285365}
   - component: {fileID: 3020718701841115210}
+  - component: {fileID: -1492471676696130369}
   m_Layer: 0
   m_Name: Shield Weapon
   m_TagString: Untagged
@@ -75,9 +76,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1650906053
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayerID: -696397833
+  m_SortingLayer: 2
+  m_SortingOrder: 1000
   m_Sprite: {fileID: 453888899, guid: 9fedc69aa99ce6247b1ef1f1464462a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -139,3 +140,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.08965057
+--- !u!114 &-1492471676696130369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2710561752453789928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d13551e816d4b449491e22c6419732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: 9585bb2abbfb12b4f9e40fef3c7a99ff, type: 3}
+  volume: 0.2
+  pitch: 1.49
+  use3DSound: 0

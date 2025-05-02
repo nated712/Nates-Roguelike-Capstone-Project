@@ -175,7 +175,7 @@ MonoBehaviour:
   bossCanvas: {fileID: 0}
   healthSlider: {fileID: 0}
   bossNameText: {fileID: 0}
-  bossName: Lord of the Horde, Wendell
+  bossName: Wendell, Undying Lord of the Goblin Horde
   enemyData: {fileID: 11400000, guid: b19cc694f00bae7469119ef9e1e3e0d9, type: 2}
 --- !u!114 &5997288891342086743
 MonoBehaviour:
@@ -195,7 +195,7 @@ MonoBehaviour:
   HPDrop: {fileID: 4459389006661986236, guid: fb096747f03ac6048aaf4ceb6b4be1f6, type: 3}
   weaponUpgradeDrop: {fileID: 4755212950972126449, guid: 2e0aef6f6e6ce1d42967d1aaa05e08a4, type: 3}
   enemyScoreValue: 5000
-  enemyKillValue: 20
+  enemyKillValue: 50
   scoreManager: {fileID: 0}
   bossUI: {fileID: 5682007645596001339}
 --- !u!114 &1353535087604592259
@@ -215,3 +215,4 @@ MonoBehaviour:
   attackCooldown: 8
   chargeSpeedMultiplier: 2
   chargeDuration: 1.5
+  chargeEffectPrefab: {fileID: 6796253731272208096, guid: a298f1800357505468ff454ffac7b691, type: 3}

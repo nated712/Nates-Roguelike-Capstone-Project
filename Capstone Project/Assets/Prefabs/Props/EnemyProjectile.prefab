@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5433148168090873700}
   - component: {fileID: 7834436764979149111}
   - component: {fileID: 6850594159805043294}
+  - component: {fileID: -2751362328163298959}
   m_Layer: 7
   m_Name: EnemyProjectile
   m_TagString: Untagged
@@ -285,3 +286,19 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &-2751362328163298959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5761430774408118688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d13551e816d4b449491e22c6419732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: 4edd55d2c35b843418d9121646c71b4f, type: 3}
+  volume: 0.08
+  pitch: 2.5
+  use3DSound: 0

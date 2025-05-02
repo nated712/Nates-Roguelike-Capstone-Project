@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using TMPro;
 public class HealthManaManager : MonoBehaviour
 {
+    public AudioClip damageSound;
+    private AudioSource audioSource;
     public float maxMana = 100f;
     public float currentMana;
     public float manaRegenRate = 9f;
@@ -21,6 +23,7 @@ public class HealthManaManager : MonoBehaviour
         HPslider.value = currentHP;
         MPslider.maxValue = maxMana;
         MPslider.value = currentMana;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -37,9 +40,23 @@ public class HealthManaManager : MonoBehaviour
         currentHP -= damageAmount;
         currentHP = Mathf.Clamp(currentHP, 0, maxHealth);
         HPslider.value = currentHP;
+        //play hit sound if taking negative damage (dont play if healing)
+        if (damageAmount>0){
+            if (damageSound != null && audioSource != null)
+            {
+            
+                audioSource.volume = .3f;
+                audioSource.pitch = Random.Range(2.8f, 3f);
+
+                audioSource.PlayOneShot(damageSound);
+            } else{
+                print("Audio Error!");
+            }
+        }
         if(currentHP <= 0){    
             Die();      
         }
+
     }
 
     public void RegenMana(){

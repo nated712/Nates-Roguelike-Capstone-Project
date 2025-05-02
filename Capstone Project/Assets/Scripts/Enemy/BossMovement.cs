@@ -18,6 +18,8 @@ public class BossMovement : MonoBehaviour
     public float chargeSpeedMultiplier = 3f; //boss moves faster while charging
     public float chargeDuration = 2f;
     private float chargeStartTime;
+    [SerializeField] private GameObject chargeEffectPrefab;
+    private GameObject activeChargeEffect;
 
     void Start()
     {
@@ -42,6 +44,10 @@ public class BossMovement : MonoBehaviour
                     chargeStartTime = Time.time;
                     chargeDirection = (player.position - transform.position).normalized; // lock the direction
                     lastAttackTime = Time.time;
+                    if (chargeEffectPrefab != null && activeChargeEffect == null)
+                    {
+                        activeChargeEffect = Instantiate(chargeEffectPrefab, transform.position, Quaternion.identity, transform);
+                    }
                 }
                 else if (!isAttacking)
                 {
@@ -77,6 +83,10 @@ public class BossMovement : MonoBehaviour
 
     void Charge()
     {
+        if (activeChargeEffect != null)
+        {
+            activeChargeEffect.transform.position = transform.position;
+        }
         float step = enemyData.MoveSpeed * chargeSpeedMultiplier * Time.deltaTime;
 
         Vector2 previousPosition = transform.position;
@@ -89,6 +99,11 @@ public class BossMovement : MonoBehaviour
         {
             isCharging = false;
             isAttacking = false;
+            if (activeChargeEffect != null)
+            {
+                Destroy(activeChargeEffect);
+                activeChargeEffect = null;
+            }
         }
     }
 

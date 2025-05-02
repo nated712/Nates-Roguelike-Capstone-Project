@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5241742766896650078}
   - component: {fileID: 8919164995154830909}
   - component: {fileID: -3675209222145163163}
+  - component: {fileID: 7465929590677367054}
   m_Layer: 0
   m_Name: HurtEffect
   m_TagString: Untagged
@@ -4847,3 +4848,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAfterSeconds: 0.5
+--- !u!114 &7465929590677367054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5100057737189128335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d13551e816d4b449491e22c6419732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: 92f7dd4e79176854cb2ca83bfc770fdf, type: 3}
+  volume: 0.16
+  pitch: 1.7
+  use3DSound: 0

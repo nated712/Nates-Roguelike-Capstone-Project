@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class SpearBehavior : ProjectileWeaponBehavior
 {
-   
-
     protected override void Start()
     {
         base.Start();

@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PManager : MonoBehaviour
 {
+    public AudioClip dashSound;
+    private AudioSource audioSource;
     public float moveSpeed;
     public Rigidbody2D rb;
     [HideInInspector] public Vector2 moveDir;
@@ -21,6 +23,7 @@ public class PManager : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         lastMovedVector = new Vector2(-1, 0f);
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -30,6 +33,15 @@ public class PManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !isDashing && !dashOnCooldown)
         {
             StartCoroutine(Dash());
+            //play hit sound
+            if (dashSound != null && audioSource != null)
+            {
+                audioSource.volume = .10f;
+                audioSource.pitch = Random.Range(0.6f, 0.8f);
+                audioSource.PlayOneShot(dashSound);
+            } else{
+                print("Audio Error!");
+            }
         }
     }
 

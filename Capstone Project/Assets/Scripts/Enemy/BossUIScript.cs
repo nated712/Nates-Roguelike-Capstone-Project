@@ -42,6 +42,7 @@ public class BossUI : MonoBehaviour
         healthSlider.maxValue = enemyData.MaxHealth;
         healthSlider.value = currentHealth;
         bossNameText.text = bossName;
+        ShowUI();
     }
 
     public void TakeDamage(float amount)
@@ -54,9 +55,9 @@ public class BossUI : MonoBehaviour
             healthSlider.value = currentHealth;
         }
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 1)
         {
-            bossCanvas.enabled = false;
+            HideUI();
         }
     }
 
