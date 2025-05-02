@@ -19,6 +19,7 @@ public class EnemyStats : MonoBehaviour
     private XPManager xpManager;  
     public BossUI bossUI; // Reference to Boss UI
     public Timer screenTimer;
+    public float healthScaling = .01f;
     void Awake()
     {
         if(screenTimer == null){
@@ -26,7 +27,7 @@ public class EnemyStats : MonoBehaviour
         }
         currentMoveSpeed = enemyData.MoveSpeed;
         //Some health scaling!!
-        currentHealth = enemyData.MaxHealth + (screenTimer.elapsedTime * .01f);
+        currentHealth = enemyData.MaxHealth + (screenTimer.elapsedTime * healthScaling);
         currentDamage = enemyData.Damage;
 
         if (scoreManager == null)

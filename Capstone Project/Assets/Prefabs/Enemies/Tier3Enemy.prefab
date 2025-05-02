@@ -179,6 +179,9 @@ MonoBehaviour:
   enemyScoreValue: 400
   enemyKillValue: 3
   scoreManager: {fileID: 0}
+  bossUI: {fileID: 0}
+  screenTimer: {fileID: 0}
+  healthScaling: 0.02
 --- !u!114 &7135850774353046284
 MonoBehaviour:
   m_ObjectHideFlags: 0
