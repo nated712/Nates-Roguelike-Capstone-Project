@@ -4,7 +4,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText; // Reference to TMP UI Text
-    private float elapsedTime = 0f;
+    public float elapsedTime = 0f;
     private bool isRunning = false;
     private bool isTimerStopped = false; // Flag to check if the timer has been stopped
     private float timeReductionAmount = 5f; // Amount of time to reduce (in seconds)
@@ -27,7 +27,6 @@ public class Timer : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(elapsedTime / 60);
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
-
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         PersistentData.Instance.timer = timerText.text;
     }

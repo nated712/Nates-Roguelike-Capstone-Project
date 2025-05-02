@@ -18,10 +18,15 @@ public class EnemyStats : MonoBehaviour
     public ScoreManager scoreManager;  
     private XPManager xpManager;  
     public BossUI bossUI; // Reference to Boss UI
+    public Timer screenTimer;
     void Awake()
     {
+        if(screenTimer == null){
+            screenTimer = FindFirstObjectByType<Timer>();
+        }
         currentMoveSpeed = enemyData.MoveSpeed;
-        currentHealth = enemyData.MaxHealth;
+        //Some health scaling!!
+        currentHealth = enemyData.MaxHealth + (screenTimer.elapsedTime * .01f);
         currentDamage = enemyData.Damage;
 
         if (scoreManager == null)
