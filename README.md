@@ -1,3 +1,4 @@
+![Gameplay: ](./gameplaygif.gif)
 My project for my Capstone class.
 
 Survive the onslaught of enemies and upgrade your abilities to get the best score or survival time you can!
