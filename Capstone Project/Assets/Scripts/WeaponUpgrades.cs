@@ -5,7 +5,7 @@ using System.Collections; // Needed for IEnumerator
 public class WeaponUpgrades : MonoBehaviour
 {
     [SerializeField] private float shootDelayReduction = 0.15f;
-    [SerializeField] private float manaCostReduction = 1.3f;
+    [SerializeField] private float manaCostReduction = 2f;
     [SerializeField] private int specialShotReduction = 1;
     [SerializeField] private int specialShotReduction2 = 1;
     [SerializeField] private int minShotsToSpecial = 2;
@@ -56,7 +56,7 @@ public class WeaponUpgrades : MonoBehaviour
                 case UpgradeType.ManaCost:
                     manaCostUpgradeCount++;
                     float scaledManaCost = Mathf.Max(
-                        manaCostReduction * Mathf.Pow(0.75f, manaCostUpgradeCount - 1),
+                        manaCostReduction * Mathf.Pow(0.6f, manaCostUpgradeCount - 1),
                         manaCostReduction * 0.2f
                     );
                     spellManager.ReduceManaCost(scaledManaCost);
@@ -100,14 +100,14 @@ public class WeaponUpgrades : MonoBehaviour
                     shieldCooldownUpgradeCount++;
                     //scaling upgrades so player doesnt get too strong too fast
                     float scaledShieldCooldown = Mathf.Max(
-                        0.5f * Mathf.Pow(0.5f, shieldCooldownUpgradeCount - 1),
+                        0.6f * Mathf.Pow(0.45f, shieldCooldownUpgradeCount - 1),
                         0.15f
                     );
                     ShieldController shieldController = player.GetComponentInChildren<ShieldController>();
                     if (shieldController != null)
                     {
                         shieldController.UpgradeCooldown(scaledShieldCooldown);
-                        message = "Upgraded Shield Cooldown!";
+                        print("Shield CD is Now:" + shieldController.currentCooldown);
                     }
                     else
                     {
@@ -127,6 +127,7 @@ public class WeaponUpgrades : MonoBehaviour
                     if (spearController != null)
                     {
                         spearController.UpgradeCooldown(scaledSpearCooldown);
+                        print("Spear CD is Now:" + spearController.currentCooldown);
                         message = "Upgraded Knife Cooldown!";
                     }
                     else

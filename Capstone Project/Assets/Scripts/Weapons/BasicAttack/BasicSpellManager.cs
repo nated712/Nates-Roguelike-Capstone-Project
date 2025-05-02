@@ -73,14 +73,14 @@ public class BasicSpellManager : MonoBehaviour
                 hmm.spendMana(spellManaCost);
             }       
         } else if (Input.GetMouseButton(1) && Time.time >= lastShotTime + shootDelay){
-                if(shotCount2 < shotsToSpecial2 && hmm.currentMana > (spellManaCost * 2.5f)){
+                if(shotCount2 < shotsToSpecial2 && hmm.currentMana > (spellManaCost * 3f)){
                     //special shot command
                     //spawn bullet
                     projInst = Instantiate(specialProj, spawnPos, staff.transform.rotation);
                     lastShotTime = Time.time;
                     shotCount2++;
                     hmm.spendMana(spellManaCost * 1.5f);
-            }   else if(shotCount2 == shotsToSpecial2 && hmm.currentMana > (spellManaCost * 2.5f)){
+            }   else if(shotCount2 == shotsToSpecial2 && hmm.currentMana > (spellManaCost * 3f)){
                     shotCount2 = 1;
                     projInst = Instantiate(tier3Proj, spawnPos, staff.transform.rotation);
                     lastShotTime = Time.time;

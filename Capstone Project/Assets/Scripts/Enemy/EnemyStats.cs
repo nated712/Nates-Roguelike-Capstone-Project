@@ -29,7 +29,11 @@ public class EnemyStats : MonoBehaviour
         //Some health scaling!!
         currentHealth = enemyData.MaxHealth + (screenTimer.elapsedTime * healthScaling);
         currentDamage = enemyData.Damage;
-
+        // Initialize Boss UI health if boss
+        if (bossUI != null)
+        {
+            bossUI.InitializeHealth(currentHealth, enemyData.MaxHealth + (screenTimer.elapsedTime * healthScaling), "Wendell, Undying Lord of the Goblin Horde");
+        }
         if (scoreManager == null)
         {
             scoreManager = FindFirstObjectByType<ScoreManager>();

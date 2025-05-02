@@ -312,24 +312,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Survive the onslaught of enemies and upgrade your abilities to get the
-    best score or survival time you can!
-
-
-    Move with WASD.
-
-    Basic spell:
-    left click
-
-    Special spell: right click, but this uses more mana.
-
-    Dash
-    with space
-
-
-    Pressing (R) will end your run for you
-
-'
+  m_text: "Survive the onslaught of enemies and upgrade your abilities to get the
+    best score or survival time you can!\n\nMove with WASD\nBasic spell: left click\nSpecial
+    spell: right click, but this uses more mana.\nDash with space\n\nYour spells
+    charge as you shoot and will shoot stronger versions of themselves when used
+    enough. \n\nYour shield and knife cooldowns can be found in the top left, make
+    sure to not underutilize them!\n\nPressing (R) will end your run for you.\n\nThank
+    you for playing!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}

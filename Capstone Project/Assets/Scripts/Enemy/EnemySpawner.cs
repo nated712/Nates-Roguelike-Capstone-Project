@@ -13,10 +13,10 @@ public class EnemySpawner : MonoBehaviour
     private float currentSpawnInterval; //can be printed to show how fast enemies spawn speed progresses
     private float lastSpawnTime;
     private float timeElapsed;
-    private float bossSpawnInterval = 120f;
-    private float nextBossSpawnTime = 180f;
+    private float bossSpawnInterval = 180f;
+    private float nextBossSpawnTime = 120f;
 
-    private float[] minSpawnIntervals = { 0.8f, 0.68f, 0.5f, 0.4f, 0.1f }; // Based upon 0-2, 2-4, 4-6, 6-8, 10+ minutes
+    private float[] minSpawnIntervals = { 0.8f, 0.68f, 0.5f, 0.45f, 0.3f }; // Based upon 0-2, 2-4, 4-6, 6-8, 10+ minutes
     //will update with spawn intervals so game gets harder per 2 minutes
     private float[] GetEnemySpawnWeights(float time)
     {
@@ -73,17 +73,22 @@ public class EnemySpawner : MonoBehaviour
 
         float rand = Random.Range(0f, total);
         float cumulative = 0f;
+        GameObject enemy;
 
         if ((cumulative += weights[0]) >= rand)
-            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
         else if ((cumulative += weights[1]) >= rand)
-            Instantiate(enemyPrefab2, spawnPosition, Quaternion.identity);
+            enemy = Instantiate(enemyPrefab2, spawnPosition, Quaternion.identity);
         else if ((cumulative += weights[2]) >= rand)
-            Instantiate(enemyPrefab3, spawnPosition, Quaternion.identity);
+            enemy = Instantiate(enemyPrefab3, spawnPosition, Quaternion.identity);
         else
-            Instantiate(enemyPrefab4, spawnPosition, Quaternion.identity);
+            enemy = Instantiate(enemyPrefab4, spawnPosition, Quaternion.identity);
 
-    }
+        // Adjust rendering order (not position)
+        SpriteRenderer sr = enemy.GetComponent<SpriteRenderer>();
+        if (sr != null)
+            sr.sortingOrder = Random.Range(0, 15); // small range to offset rendering visually
+        }
 
     private Vector3 GetRandomSpawnPosition()
     {
