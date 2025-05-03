@@ -16,3 +16,5 @@ Pressing (R) will end your run for you.
 
 Thank you for playing!
 
+My Current Highscore is: 634950 with a time survived of 14:54 
+
